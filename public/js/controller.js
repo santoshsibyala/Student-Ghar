@@ -22,9 +22,32 @@ app.controller('studentGharController',function($scope,$http,$location){
 		});
 	};
 
+
 });
 
 app.controller('courseController',function($scope,$http,$location){
+	var cc = this;
+	cc.login=function(){
+		alert("clicked");
+		//alert($scope.search);
+		$http({
+			method:'GET',
+			url:'/login',
+			data: { }
+		}).success(function (data){
+				//alert("data is "+data);
+				//alert("After sucess is"+data.search);
+				//alert("Courses loaded successfully");
+				//alert("/afterCourses/"+data.search);
+				window.location = '/login/'+data.username;
+			
+
+		}).error(function (error){
+			alert("This error "+error+" occured while loading courses");
+
+		});	
+		
+	}
 	$scope.particularCourse=function(x){
 		if(x===2||x===3){
 			alert("Courses did not build yet");
@@ -49,4 +72,24 @@ app.controller('courseController',function($scope,$http,$location){
 
 		}
 	};
+	/*$scope.login=function(){
+		alert("clicked");
+		//alert($scope.search);
+		$http({
+			method:'GET',
+			url:'/login',
+			data: { }
+		}).success(function (data){
+				//alert("data is "+data);
+				//alert("After sucess is"+data.search);
+				//alert("Courses loaded successfully");
+				//alert("/afterCourses/"+data.search);
+				window.location = '/login/'+data.username;
+			
+
+		}).error(function (error){
+			alert("This error "+error+" occured while loading courses");
+
+		});	
+	};*/
 });

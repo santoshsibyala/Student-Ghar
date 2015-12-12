@@ -63,12 +63,21 @@ function afterparticularCourse(req,res){
 	res.render('particularCourse', { title: 'Courses'});
 
 }
+function login(req,res){
+	res.send({"status":"success",'username':'santosh'});	
+}
+function loginUser(req,res){
+	var username=req.params.username;
+	res.render('user', { title: 'Courses'});	
+}
 
 router.get('/',home);
 router.get('/afterCourses/:search',afterCourses);
 router.post('/courses',courses);
 router.post('/particularCourse',particularCourse);
 router.get('/afterparticularCourse/:course_id',afterparticularCourse);
+router.get('/login',login);
+router.get('/login/:username',loginUser);
 
 
 module.exports = router;

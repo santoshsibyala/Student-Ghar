@@ -762,4 +762,21 @@ a.btn_red {color: #FFF;}
   border-style: solid;
     border-width: 1px ;
 }
-
+.average-rate {
+    color: #D23837;
+    font-size: 96px;
+}
+.red{
+  color: #D23837;
+}
+.rating{
+  margin-bottom: 0px;
+}
+.pad{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.border1{
+  border-style: solid;
+    border-width: 0px ;
+}

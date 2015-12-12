@@ -70,74 +70,6 @@
         </header>
 
 
-<div class="container">
-    
-
-    <div id="modal" class="popupContainer">
-        <header class="popupHeader">
-            <span class="header_title" >Login</span>
-            <span class="modal_close"><i class="fa fa-times"></i></span>
-        </header>
-        
-        <section class="popupBody">
-            <!-- Social Login -->
-            <div class="social_login">
-            
-
-                <div class="action_btns">
-                    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-                </div>
-            </div>
-
-            <!-- Username & Password Login form -->
-            <div class="user_login">
-                <form name="login">
-                    <label>Email / Username</label>
-                    <input type="text" ng-model="email"/>
-                    <br />
-
-                    <label>Password</label>
-                    <input type="password" ng-model="password"/>
-                    <br />
-
-                    
-
-                    <div class="action_btns">
-                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="login()">Login</a></div>
-                    </div>
-                </form>
-
-                <a href="#" class="forgot_password">Forgot password?</a>
-            </div>
-
-            <!-- Register Form -->
-            <div class="user_register">
-                <form id="singupform">
-                    <label>Full Name</label>
-                    <input type="text" ng-model="email" />
-                    <br />
-                    
-                    <label>Email Address</label>
-                    <input type="email" ng-model="email" />
-                    <br />
-
-                    <label>Password</label>
-                    <input type="password" ng-model="password"/>
-                    <br />
-
-                    
-
-                    <div class="action_btns">
-                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="register()">Register</a></div>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </div>
-</div>
 
 
 
@@ -158,7 +90,8 @@
         </div>
         <div class="col-md-4">
             <h2> $09</h2>
-            <a class="btn btn-primary" href="#">Take this Course</a><br/>
+            <a href="#modal" id="course" class="btn btn-primary">Take this Course</a><br/>
+             
             <div class="row">
                 <div class="col-md-3">
                     Lectures
@@ -180,7 +113,7 @@
         
     </div>
 </div>
-<div class="container-fluid  jumbotron">
+<div class="container-fluid  jumbotron rating">
     <div class="row">
         <div class="col-md-6 col-md-offset-1">
             <font size="3em"><b>Course Description</b><br/>
@@ -262,12 +195,46 @@
                  
                     </div>
                </div> 
+               <br/><b>Instructor Biography</b>
+               <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-square img-thumbnail" src="/images/testimonial/01.jpg" alt="" >
+                    </div>
+                    <div class="col-md-9 ">
+                        Santosh Sibyala, Graduate Student at San Jose State University<br/>
+                        <a href="https://www.facebook.com/sibyala560"><i class="fa fa-facebook fa-3x"></i></a>&nbsp;&nbsp;
+                        <a href="https://www.github.com/santoshsibyala"><i class="fa fa-github fa-3x"></i></a>&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/santoshsibyala"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                        <br/>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        Graduate student at San Jose State University in the stream of Software Engineering. I am actively looking for Full-Time opportunities as a Software Engineer. I am currently working as Full-Stack Developer Intern at Knobull, where I developed Responsive web site for Knobull and I am working on Local and Facebook authentication, user management and functionality for blogposts using NodeJS express framework. I am integrating Faroo search API to our front-end. During Summer 2015, I have worked as Software Engineer Intern in BA Technolinks Corp,  Santa Clara. As a software engineer intern I developed chat application for internal website of BA Technolinks. I have one year of experience as Software Engineer in Access Stb Labs Pvt Ltd in India.
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <b>Reviews</b><br/>
+                    <div class="col-md-6">
+                        Average Rating<br/><br/>
+                        <span class="average-rate">3.5</span><br/>
+                        <span class="red"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></span>&nbsp;13 ratings
+                    </div>
+                </div>
+                <br/>
+                
+
     </div>
     </font>
     <font sixe="2em">
-    <div class="col-md-4 border">
+
+    <div class="col-md-4 border white">
+        
         <b>Students Who Viewed This Course Also Viewed</b><br/>
         <div class="row">
+            
             <div class="col-md-4">
                 
                 <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt=""><br/><br/><br/><br/>
@@ -286,11 +253,114 @@
                     $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
             </div>
         </div>
+        
     </div>
 
         </div>
+        
 </div>
 </font>
+<div class="container-fluid jumbotron rating" >
+    <div class="col-md-11 col-md-offset-1">
+    <b>More from Santosh Sibyala</b><br/><br/>
+    </div>
+    <div class="row">
+                    
+                    <font size="2.5em">
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                        
+                        <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%"><br/>
+                        <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
+                        <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
+                        <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                    </div>
+                    </font>
+                </div>
+</div>
+
+
+<div class="container">
+    
+
+    <div id="modal" class="popupContainer">
+        <header class="popupHeader">
+            <span class="header_title" >Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+        
+        <section class="popupBody">
+            <!-- Social Login -->
+            <div class="social_login">
+            
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                </div>
+            </div>
+
+            <!-- Username & Password Login form -->
+            <div class="user_login">
+                <form name="login">
+                    <label>Email / Username</label>
+                    <input type="text" ng-model="email"/>
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" ng-model="password"/>
+                    <br />
+
+                    
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href='' class="btn btn_red" ng-click="cc.login()">Login</a></div>
+                    </div>
+                </form>
+
+                <a href="#" class="forgot_password">Forgot password?</a>
+            </div>
+
+            <!-- Register Form -->
+            <div class="user_register">
+                <form id="singupform">
+                    <label>Full Name</label>
+                    <input type="text" ng-model="email" />
+                    <br />
+                    
+                    <label>Email Address</label>
+                    <input type="email" ng-model="email" />
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" ng-model="password"/>
+                    <br />
+
+                    
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="register()">Register</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
 <footer id="footer">
         <div class="container">
             <div class="row">
@@ -326,6 +396,7 @@
 <script type="text/javascript">
     $("#modal_trigger").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });
 
+$("#course").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });
     $(function(){
         // Calling Login Form
         $("#login_form").click(function(){
