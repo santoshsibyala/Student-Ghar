@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentGhar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Student Ghar</title>
+	<!-- core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.transitions.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/sweet-alert.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body id="home" class="homepage" ng-controller='courseController as cc'>
+
+
+    <header id="top-header" class="navbar-inverse navbar-fixed-top" style="background-image: url(/images/slider/bg1.jpg);">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+                    
+                    <!-- logo -->
+                    <div class="navbar-brand ">
+                        <a class="smooth-scroll" data-section="#home" href="#home" >
+                            <h3 style="color:white;">STUDENT GHAR</h3>
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <div class="main-menu">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="scroll"><a href="#home" data-section="#home">Home</a></li>
+                            <li class="scroll"><a href="#about" data-section="#about">About</a></li>
+                            <li class="scroll"><a href="#services" data-section="#services">Courses</a></li>
+                            
+                            <li class="scroll"><a href="#contact-area" data-section="#contact-area">Contact</a></li>
+                            <li class=""><a href="#modal" id="modal_trigger" data-section="">Login | Signup</a></li>   
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+                
+            </div>
+        </header>
+
+
+<div class="container">
+    
+
+    <div id="modal" class="popupContainer">
+        <header class="popupHeader">
+            <span class="header_title" >Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+        
+        <section class="popupBody">
+            <!-- Social Login -->
+            <div class="social_login">
+            
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                </div>
+            </div>
+
+            <!-- Username & Password Login form -->
+            <div class="user_login">
+                <form name="login">
+                    <label>Email / Username</label>
+                    <input type="text" ng-model="email"/>
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" ng-model="password"/>
+                    <br />
+
+                    
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="login()">Login</a></div>
+                    </div>
+                </form>
+
+                <a href="#" class="forgot_password">Forgot password?</a>
+            </div>
+
+            <!-- Register Form -->
+            <div class="user_register">
+                <form id="singupform">
+                    <label>Full Name</label>
+                    <input type="text" ng-model="email" />
+                    <br />
+                    
+                    <label>Email Address</label>
+                    <input type="email" ng-model="email" />
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" ng-model="password"/>
+                    <br />
+
+                    
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="register()">Register</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="col-md-12">
+        <br/>
+        <b><font size="6em">CoffeeScript: The Good Parts—Write Better javaScript</font></b><br/>
+        <font size="3em">The good and not so good parts of CoffeeScript in comparison to JavaScript.<br/>
+        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+        Instructed by Santosh Sibyala<br/><br/></font>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/pbWHx8lyNHY?list=PL399DF0B74063889F" frameborder="0" allowfullscreen></iframe>
+
+            
+        </div>
+        <div class="col-md-4">
+            <h2> $09</h2>
+            <a class="btn btn-primary" href="#">Take this Course</a><br/>
+            <div class="row">
+                <div class="col-md-3">
+                    Lectures
+                    Video
+                    Skill Level
+                    Language
+                    Includes
+                </div>
+                <div class="col-md-7 col-md-offset-2">
+                    <b>15</b><br/>
+                    <b>2 Hours</b><br/>
+                    <b>Beginner Level</b><br/>
+                    <b>English</b><br/>
+                    <b>Lifetime access <br/>
+                        30 day money back guarantee! </b>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="container-fluid  jumbotron">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <font size="3em"><b>Course Description</b><br/>
+            The CoffeeScript is a language that was built on top of JavaScript. CoffeeScript has some added benefits and its code is compiled into native JavaScript for execution. The CoffeeScript pros include: better syntax, function and class construction patterns, automatic var insertion, comprehensions and others.<br>
+            Most of these perks will be obvious once we take a look at some examples. This quick language reference can get you started with CoffeeScript.
+               <ul>
+                    <li>Semicolons, Whitespace and Parentheses</li>
+                    <li> Vars</li>
+                    <li>Conditions</li>
+                </ul>
+            <b>What are the requirements?</b>
+            <ul>
+                    <li>Basic JavaScript skills</li>
+            </ul>
+            <b>What am I going to get from </b>
+            <ul>
+                <li>Over 15 lectures and 1 hour of content!</li>
+                <li>Understand CoffeeScript syntax (semicolons, whitespace, parentheses)</li>
+                <li>Understand automatic var insertion mechanism and while manual var might be bad in native JavaScript</li>
+                <li>Use CoffeeScript conditions</li>
+                <li>Use CoffeeScript functions (fat and skinny arrow ones)</li>
+                <li>Use CoffeeScript classes</li>
+                <li>Use CoffeeScript arrays</li>
+                <li>Use CoffeeScript comprehensions</li>
+            </ul>
+            <b>What is the target audience?</b>
+            <ul>
+                <li>Front-end developers</li>
+               <li>Designers</li>
+            </ul>
+              <b>Curriculum</b><br/>
+             <b> Section 1: Presentation</b>
+              <div class="row">
+                    <div class="col-md-2">
+                            Lecture 1<br/>
+                            Lecture 2<br/>
+                            Lecture 3<br/>
+                    </div>
+                    <div class="col-md-5">
+                            Inroduction<br/>
+                            Objects<br/>
+                            Functions<br/>
+                    </div>
+                    <div class="col-md-2">
+                            09.10&nbsp;<i class="fa fa-film"></i><br/>
+                            07.00&nbsp;<i class="fa fa-film"></i><br/>
+                            04.32&nbsp;<i class="fa fa-film"></i><br/>
+                    </div>
+               </div>             
+                <b> Section 2: Fundamentals</b>
+                <div class="row">
+                    <div class="col-md-2">
+                            Lecture 4<br/>
+                            Lecture 5<br/>
+                            Lecture 6<br/>
+                    </div>
+                    <div class="col-md-5">
+                            CoffeeScript Fundamentals<br/>
+                            CoffeeScript Quirks<br/>
+                            Free Coffee Ebooks<br/>
+                    </div>
+                    <div class="col-md-2">
+                            09.10&nbsp;<i class="fa fa-film"></i><br/>
+                            07.00&nbsp;<i class="fa fa-film"></i><br/>
+                            04.32&nbsp;<i class="fa fa-film"></i><br/>
+                    </div>
+               </div>  
+         <b> Section 3: Bonus</b>
+                <div class="row">
+                    <div class="col-md-2">
+                            Lecture 7<br/>
+  
+                    </div>
+                    <div class="col-md-5">
+                            Oh my JS Ebook<br/>
+                  </div>
+                    <div class="col-md-2">
+                            09.10&nbsp;<i class="fa fa-film"></i><br/>
+                 
+                    </div>
+               </div> 
+    </div>
+    </font>
+    <font sixe="2em">
+    <div class="col-md-4 border">
+        <b>Students Who Viewed This Course Also Viewed</b><br/>
+        <div class="row">
+            <div class="col-md-4">
+                
+                <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt=""><br/><br/><br/><br/>
+                <img class="img-responsive" src="/images/courses/backbone.jpg" alt=""><br/><br/><br/><br/>
+                <img class="img-responsive" src="/images/courses/backbone1.jpg" alt=""><br/><br/>
+            </div>
+            <div class="col-md-8 ">
+                <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/><br/>
+                    <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
+            </div>
+        </div>
+    </div>
+
+        </div>
+</div>
+</font>
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center">
+                        &copy; 2015 Student Ghar.  
+                    </p>
+                    
+                    <ul class="social-icons text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/mousescroll.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/jquery.inview.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="/js/controller.js"></script>
+    <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+<script type="text/javascript">
+    $("#modal_trigger").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });
+
+    $(function(){
+        // Calling Login Form
+        $("#login_form").click(function(){
+            $(".social_login").hide();
+            $(".user_login").show();
+            return false;
+        });
+
+        // Calling Register Form
+        $("#register_form").click(function(){
+            $(".social_login").hide();
+            $(".user_register").show();
+            $(".header_title").text('Register');
+            return false;
+        });
+
+        // Going back to Social Forms
+        $(".back_btn").click(function(){
+            $(".user_login").hide();
+            $(".user_register").hide();
+            $(".social_login").show();
+            $(".header_title").text('Login');
+            return false;
+        });
+
+    })
+</script>
+</body>
+</html>
