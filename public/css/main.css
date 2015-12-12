@@ -758,6 +758,15 @@ a.btn_red {color: #FFF;}
 .white{
   color:white;
 }
+hr{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.height{
+/*  border-style: solid;
+    border-width: 1px ;
+  height:1300px;*/
+}
 .border{
   border-style: solid;
     border-width: 1px ;
