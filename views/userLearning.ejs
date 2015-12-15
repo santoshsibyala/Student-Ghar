@@ -30,67 +30,159 @@
 <body id="home" class="homepage" ng-controller='courseController as cc'>
 
 
-    <header id="top-header" class="navbar-inverse navbar-fixed-top" style="background-image: url(/images/slider/bg1.jpg);">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- responsive nav button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- /responsive nav button -->
-                    
-                    <!-- logo -->
-                    <div class="navbar-brand ">
+    <header id="top-header">
+ 
+<nav class="navbar-inverse navbar-fixed-top" style="background-image: url(/images/slider/bg1.jpg);">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand ">
                         <a class="smooth-scroll" data-section="#home" href="#home" >
                             <h3 style="color:white;">STUDENT GHAR</h3>
                         </a>
                     </div>
-                    <!-- /logo -->
-                </div>
+    </div>
 
-                <!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <div class="main-menu">
-                        <ul id="nav" class="nav navbar-nav">
-                            <!-- <li class="scroll"><a href="#home" data-section="#home">Home</a></li>
-                            <li class="scroll"><a href="#about" data-section="#about">About</a></li>
-                            <li class="scroll"><a href="#services" data-section="#services">Courses</a></li>
-                            
-                            <li class="scroll"><a href="#contact-area" data-section="#contact-area">Contact</a></li>
-                            <li class=""><a href="#modal" id="modal_trigger" data-section="">Login | Signup</a></li>  -->  
-                        </ul>
-                    </div>
-                </nav>
-                <!-- /main nav -->
-                
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+          <div class="input-group">
+                <input type="text" class="form-control " placeholder="Serach for Courses"  ng-model='search' style="background-color:white"/> 
+                <span class="input-group-addon" ><a href="" ><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
             </div>
-        </header>
-<br/>
-<font size="2.5em">
-    <div class="container-fluid">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-responsive img-rounded" alt="Santosh Sibyala" src="/images/testimonial/01.jpg" width="20" height="20" > <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="" class="ThisLink">Signed as <br/> Santosh Sibyala</a></li>
+            <li role="separator" class="divider"></li>
+            <li ><a href="" class="background-switch" ng-init="user='santosh'" ng-click="cc.userProfile(user)"><i class="fa fa-user"></i>&nbsp;&nbsp;Your Profile</a></li>
+            <li><a href="" class="background-switch" ng-click="cc.myCourses()"><i class="fa fa-server"></i>&nbsp;&nbsp;Your Courses</a></li>
+            <li><a href="" class="background-switch" ng-init="user='santosh'" ng-click="cc.settings(user)"><i class="fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="" class="background-switch" ng-click="cc.logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+<font size="3em">
+    <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <iframe  width="840" height="400px" src="https://www.youtube.com/embed/pbWHx8lyNHY?list=PL399DF0B74063889F" frameborder="0" allowfullscreen></iframe>
+            <div class="col-md-4">
+                <b>My Courses</b>
             </div>
-            <div class="col-md-3 jumbotron">
-                <b>Videos</b><br/>
-                <a href='' ng-init="a=1" ng-click=''>How to install CoffeeScript</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Writing and compiling your first CoffeeScript</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>How to write your first CoffeeScript program</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Opearators & Aliases</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Arrays & Objects in Coffee Script</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Loops in  CoffeeScript</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Switch statements in CoffeeScript</a><hr>
-                <a href='' ng-init="a=1" ng-click=''>Array slice methods</a><hr>
+            <div class="col-md-2 col-md-offset-2">
+                <a href="" ng-class="active"  ng-click="learning1()"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;Learning</a>
+            </div>
 
+            <div class="col-md-2 col-md-offset-2">
+                <a href="" ng-class="unactive"  ng-click="wishList1()"><i class="fa fa-briefcase"></i>&nbsp;&nbsp; Wishlist</a>
             </div>
         </div>
-
     </div>
 </font>
+<br/>
+<hr/>
+<br/>
+<font size="2.5em">
+    <div class="container rating" ng-show="learning">
+  
+    <div class="row">
+                    
+                    
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                        
+                        <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="a='coffeescript'" ng-click="cc.userCurrentPlaying(a)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+
+                      
+
+
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
+                        <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
+                        <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                    </div>
+                    
+                </div>
+</div>
+<!-- Wishlist-->
+<div class="container rating" ng-hide="wishList" >
+  
+    <div class="row">
+                    
+                    
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                        
+                        <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+
+                         <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+
+                      
+
+
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
+                        <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                     <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
+                        <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                     <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="x=1" ng-click="particularCourse(x)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+                    </div>
+                    
+                </div>
+</div> 
+
+</font>
+
 <footer id="footer">
         <div class="container">
             <div class="row">
@@ -120,9 +212,11 @@
     <script src="/js/jquery.inview.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/sweet-alert.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="/js/controller.js"></script>
     <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+
 
     </body>
 </html>

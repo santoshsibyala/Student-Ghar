@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentGhar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Student Ghar</title>
+	<!-- core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.transitions.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/sweet-alert.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body id="home" class="homepage" ng-controller='courseController as cc'>
+
+
+    <header id="top-header" style="padding-top:0px;">
+ 
+<nav class="navbar-inverse navbar-fixed-top" style="background-image: url(/images/slider/bg1.jpg);">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand ">
+                        <a class="smooth-scroll" data-section="#home" href="#home" >
+                            <h3 style="color:white;">STUDENT GHAR</h3>
+                        </a>
+                    </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+          <ul class="dropdown-menu">
+            
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+          <div class="input-group">
+                <input type="text" class="form-control " placeholder="Serach for Courses"  ng-model='search' style="background-color:white"/> 
+                <span class="input-group-addon" ><a href="" ><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
+            </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-responsive img-rounded" alt="Santosh Sibyala" src="/images/testimonial/01.jpg" width="20" height="20" > <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="" class="ThisLink">Signed as <br/> Santosh Sibyala</a></li>
+            <li role="separator" class="divider"></li>
+            <li ><a href="" class="background-switch" ng-init="user='santosh'" ng-click="cc.userProfile(user)"><i class="fa fa-user"></i>&nbsp;&nbsp;Your Profile</a></li>
+            <li><a href="" class="background-switch" ng-click="cc.myCourses()"><i class="fa fa-server"></i>&nbsp;&nbsp;Your Courses</a></li>
+            <li><a href="" class="background-switch" ng-init="user='santosh'" ng-click="cc.settings(user)"><i class="fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="" class="background-switch" ng-click="cc.logout()"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+<font size="2.5em">
+           <div class="container-fluid" style="background-image: url(/images/slider/bg1.jpg);">
+
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                
+                                    <h1 class="white">Santosh Sibyala</h1>
+                                    
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+            
+            <br/>
+        <div class="container" >
+            <div class="row ">
+                <div class="col-md-5 ">
+                    <img src="/images/testimonial/01.jpg" class="img-responsive img-rounded" alt="Santosh Sibyala" width="304" height="236"> 
+                </div>
+     
+            
+                <div class="col-md-6 col-md-offset-1 ">
+                    <h4>Graduate student at San Jose State University in the stream of Software Engineering. I am actively looking for Full-Time opportunities as a Software Engineer. I am currently working as Full-Stack Developer Intern at Knobull, where I developed Responsive web site for Knobull and I am working on Local and Facebook authentication, user management and functionality for blogposts using NodeJS express framework. I am integrating Faroo search API to our front-end. During Summer 2015, I have worked as Software Engineer Intern in BA Technolinks Corp,  Santa Clara. As a software engineer intern I developed chat application for internal website of BA Technolinks. I have one year of experience as Software Engineer in Access Stb Labs Pvt Ltd in India. </h4>
+
+                    <a class="btn btn-primary" href="" ng-init="userName='santosh'" ng-click='cc.editProfile(userName)'>Edit Profile </a>
+                    
+                </div>
+            </div>
+            
+        </div> 
+
+        <div class="container-fluid jumbotron">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-4">
+                   <font size="4em"> <b>Courses that you enrolled in</b></font>
+                </div>
+            </div>
+            <br/>
+              <div class="row">
+                    
+                    
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                        
+                        <img class="img-responsive" src="/images/courses/coffeescript.jpg" alt="" width="100%">
+                        <a href='' ng-init="a='coffeescript'" ng-click="cc.userCurrentPlaying(a)"><b >CoffeeScript: The Good Parts—Write Better javaScript</b></a><br/>
+                        $09. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;6 videos.&nbsp;&nbsp; Beginner Level<br/>
+
+                      
+
+
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
+                        <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1 border1 pad">
+                    
+                        <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
+                        <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                    </div>
+                    
+                </div>
+        </div>
+</font>
+
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center">
+                        &copy; 2015 Student Ghar.  
+                    </p>
+                    
+                    <ul class="social-icons text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/mousescroll.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/jquery.inview.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/sweet-alert.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="/js/controller.js"></script>
+    <script type="text/javascript" src="/js/jquery.leanModal.min.js"></script>
+
+
+    </body>
+</html>

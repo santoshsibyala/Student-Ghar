@@ -68,11 +68,62 @@ function login(req,res){
 }
 function loginUser(req,res){
 	var username=req.params.username;
+		
 	res.render('user', { title: 'Courses'});	
 }
 function mycourses(req,res){
 	var username=req.params.username;
 	res.render('userLearning', { title: 'Courses'});	
+}
+function userCurrentPlaying(req,res){
+	var course = req.param('course');
+	var user = req.param('user');
+	console.log("Course  is "+course);
+	res.send({"status":"success",course:course,user:user});
+
+}
+
+function currentPlaying(req,res){
+	var course=req.params.course;
+	res.render('userCurrentPlayingCourse', { title: 'Courses'});
+
+}
+function userProfile(req,res){
+	var user = req.param('user');
+	console.log("User  is "+user);
+	res.send({"status":"success",user:user});
+
+}
+function profile(req,res){
+	var user=req.params.username;
+	res.render('userProfile', { title: 'Courses'});
+
+}
+function editProfile(req,res){
+	var user = req.param('user');
+	console.log("User  is "+user);
+	res.send({"status":"success",user:user});
+
+}
+function userEditProfile(req,res){
+	var user=req.params.username;
+	res.render('editProfile', { title: 'Courses'});	
+}
+function settings(req,res){
+	var user = req.param('user');
+	console.log(user);
+	res.send({"status":"success","user":user});
+}
+function userSettings(req,res){
+	var user=req.params.username;
+	res.render('settings', { title: 'Courses'});	
+}
+
+function logout(req,res){
+	var user = req.param('user_id');
+	console.log("Destroy user session");
+	res.send({"status":"success"});
+
 }
 
 router.get('/',home);
@@ -83,6 +134,14 @@ router.get('/afterparticularCourse/:course_id',afterparticularCourse);
 router.get('/login',login);
 router.get('/login/:username',loginUser);
 router.get('/login/:username/learning',mycourses);
-
+router.post('/userCurrentPlaying',userCurrentPlaying);
+router.get('/login/:username/learning/:course',currentPlaying);
+router.post('/userProfile',userProfile);
+router.get('/login/:username/profile',profile);
+router.post('/editProfile',editProfile);
+router.get('/login/:username/editprofile',userEditProfile);
+router.get('/login/:username/settings',userSettings);
+router.post('/settings',settings);
+router.post('/logout',logout);
 module.exports = router;
 

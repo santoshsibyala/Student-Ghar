@@ -32,7 +32,7 @@ p {
     font-weight: 300;
 }
 a {
-  color: #72C05B;
+  color: #72C05B ;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
   -o-transition: color 400ms, background-color 400ms;
@@ -41,9 +41,17 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #72C05B;
-}
+  color: #72C05B ;
 
+}
+.active{
+  color: #337ab7;
+
+}
+.unactive{
+  color: #72C05B;
+
+}
 hr {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
@@ -789,3 +797,27 @@ hr{
   border-style: solid;
     border-width: 0px ;
 }
+.ThisLink{
+           pointer-events: none;
+           cursor: default;
+}
+.background-switch:hover { background-color: #5589b6 !important;
+color:white; }
+
+.whiteContainer{
+  background-color: white;
+}
+.background-switch{
+  color:#5589b6;
+}
+.borderHeight{
+  border-style: solid;
+    border-width: 1px ;
+  height:300px;  
+}
+.dan{
+  background-color: #d9534f ! important;
+  color:white !important;
+}
+
+
