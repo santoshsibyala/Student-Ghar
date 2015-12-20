@@ -21,14 +21,14 @@ app.controller('courseController',function($scope,$http,$location){
 	$scope.newcourse=false;
 	$scope.serachCourses=function(){
 		//sweetAlert("clicked");
-		//alert($scope.search);
+		sweetAlert($scope.search);
 		$http({
 			method:'POST',
 			url:'/courses',
 			data: { "search": $scope.search}
 		}).success(function (data){
 			if(data.status=='success'){
-				window.location = 'https://student-ghar.herokuapp.com/afterCourses/'+data.search;
+				window.location = '/afterCourses/'+data.search;
 			}
 			else{
 				sweetAlert("Oops!",data.search,"error");
