@@ -28,7 +28,7 @@ app.controller('courseController',function($scope,$http,$location){
 			data: { "search": $scope.search}
 		}).success(function (data){
 			if(data.status=='success'){
-				window.location = '/afterCourses/'+data.search;
+				window.location = 'https://student-ghar.herokuapp.com/afterCourses/'+data.search;
 			}
 			else{
 				sweetAlert("Oops!",data.search,"error");

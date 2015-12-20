@@ -143,7 +143,7 @@ function logout(req,res){
 }
 
 router.get('/',home);
-router.get('/afterCourses/:search',afterCourses);
+router.get('https://student-ghar.herokuapp.com/afterCourses/:search',afterCourses);
 router.post('/courses',courses);
 router.post('/particularCourse',particularCourse);
 router.get('/afterparticularCourse/:course_id',afterparticularCourse);
