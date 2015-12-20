@@ -64,7 +64,19 @@ function afterparticularCourse(req,res){
 
 }
 function login(req,res){
-	res.send({"status":"success",'username':'santosh'});	
+	var username=req.param('username');
+	var password=req.param('password');
+	console.log("Username is "+username);
+	console.log("password is "+password);
+	if(username=='admin@studentghar.com'&& password=='admin1234'){
+		console.log("Admin");
+		res.send({"status":"success",'username':'admin'});
+	}
+	else{
+		console.log("user");
+		res.send({"status":"success",'username':'santosh'});	
+	}
+		
 }
 function loginUser(req,res){
 	var username=req.params.username;
@@ -119,6 +131,10 @@ function userSettings(req,res){
 	res.render('settings', { title: 'Courses'});	
 }
 
+function admin(req,res){
+	res.render('admin', { title: 'Courses'});
+}
+
 function logout(req,res){
 	var user = req.param('user_id');
 	console.log("Destroy user session");
@@ -131,7 +147,7 @@ router.get('/afterCourses/:search',afterCourses);
 router.post('/courses',courses);
 router.post('/particularCourse',particularCourse);
 router.get('/afterparticularCourse/:course_id',afterparticularCourse);
-router.get('/login',login);
+router.post('/login',login);
 router.get('/login/:username',loginUser);
 router.get('/login/:username/learning',mycourses);
 router.post('/userCurrentPlaying',userCurrentPlaying);
@@ -143,5 +159,6 @@ router.get('/login/:username/editprofile',userEditProfile);
 router.get('/login/:username/settings',userSettings);
 router.post('/settings',settings);
 router.post('/logout',logout);
+router.get('/admin',admin);
 module.exports = router;
 

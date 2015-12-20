@@ -2,8 +2,23 @@
 
 
 var app=angular.module('studentGhar',[]);
-app.controller('studentGharController',function($scope,$http,$location){
 
+
+app.controller('courseController',function($scope,$http,$location){
+	var cc = this;
+	$scope.learning=true;
+	$scope.wishList=true;
+	$scope.active="active";
+	$scope.unactive="unactive";
+	$scope.profile=true;
+	$scope.photo=false;
+	$scope.account=false;
+	$scope.creditcard=false;
+	$scope.danzerzone=false;
+	$scope.privacy=true;
+	$scope.notifications=false;
+	$scope.allcourses=true;
+	$scope.newcourse=false;
 	$scope.serachCourses=function(){
 		//sweetAlert("clicked");
 		//alert($scope.search);
@@ -27,22 +42,6 @@ app.controller('studentGharController',function($scope,$http,$location){
 	};
 
 
-});
-
-app.controller('courseController',function($scope,$http,$location){
-	var cc = this;
-	$scope.learning=true;
-	$scope.wishList=true;
-	$scope.active="active";
-	$scope.unactive="unactive";
-	$scope.profile=true;
-	$scope.photo=false;
-	$scope.account=false;
-	$scope.creditcard=false;
-	$scope.danzerzone=false;
-	$scope.privacy=true;
-	$scope.notifications=false;
-
 	$scope.learning1=function(){
 		//alert("clicked");
 		$scope.active="active";
@@ -60,15 +59,25 @@ app.controller('courseController',function($scope,$http,$location){
 	};
 	cc.login=function(){
 		//alert("clicked");
-		//alert($scope.search);
+		//alert($scope.email);
+		//alert($scope.password);
 		$http({
-			method:'GET',
+			method:'POST',
 			url:'/login',
-			data: { }
+			data: {"username":$scope.email,"password":$scope.password }
 		}).success(function (data){
 			if(data.status=='success'){
+				if(data.username==='admin'){
+					window.location = '/admin';
+				}
+				else{
+					window.location = '/login/'+data.username;
+				}
+				
+								
+				
 
-				window.location = '/login/'+data.username;
+				
 				//sweetAlert("Success");
 						/*		sweetAlert({   
 					title: "Error!",   
@@ -188,7 +197,7 @@ app.controller('courseController',function($scope,$http,$location){
 					data: { 'user':userName}
 				}).success(function (data){
 					if(data.status=='success'){
-						window.location = '/login/'+data.user+'/settings/';
+						window.location = '/login/'+data.user+'/editprofile/';
 					}
 					else{
 						sweetAlert("Oops! some thing went wrong",error,"error");				
@@ -262,11 +271,67 @@ app.controller('courseController',function($scope,$http,$location){
 				sweetAlert("Oops! some thing went wrong",error,"error");				
 			}
 			}).error(function (error){
-					sweetAlert("Oops! some thing went wrong",error,"error");
+				sweetAlert("Oops! some thing went wrong",error,"error");
 
 		});
 
 	 };
+	 cc.delete=function(){
+	 	sweetAlert({  
+	 		 title: "Are you sure?",   
+	 		 text: "You will not be able to recover your account",   
+	 		 type: "warning",   
+	 		 showCancelButton: true,   
+	 		 confirmButtonColor: "#DD6B55",   
+	 		 confirmButtonText: "Yes, delete it!", 
+	 		 cancelButtonText: "No, cancel plx!",  
+	 		 closeOnConfirm: false,   
+	 		 closeOnCancel: false }, 
+	 		 function(isConfirm){   
+	 		 	if (isConfirm) {   
+	 		 		$http({
+					method:'POST',
+					url:'/logout',
+					data: { 'user_id':1}
+					}).success(function (data){
+					if(data.status=='success'){
+						sweetAlert({   
+							title: "Deleted",   
+							text: "Your account has been deleted.",   
+							type: "warning",   
+							showCancelButton: true,   
+							confirmButtonColor: "#DD6B55",   
+							confirmButtonText: "Ok",   
+							closeOnConfirm: false 
+							}, 
+							function(){   
+								//sweetAlert("!", "", "success"); 
+								window.location = '/';
+							});
+						//sweetAlert("Deleted!", "Your account has been deleted.", "success"); 
+						
+					}
+					else{
+						sweetAlert("Oops! some thing went wrong",error,"error");				
+					}
+					}).error(function (error){
+						sweetAlert("Oops! some thing went wrong",error,"error");
+
+					});  
+	 		 		  
+	 		 	} else {     
+	 		 		sweetAlert("Cancelled", "Your account is safe :)", "error");   
+	 		 	} 
+	 	});
+	 };
+	 cc.addCourse=function(){
+	 	$scope.allcourses=false;
+	 	$scope.newcourse=true;
+	 };
+	 cc.saveNewCourse=function(){
+	 	$scope.allcourses=true;
+	 	$scope.newcourse=false;
+	 }
 	 cc.logout=function(){
 		$http({
 			method:'POST',
@@ -282,7 +347,7 @@ app.controller('courseController',function($scope,$http,$location){
 			}).error(function (error){
 					sweetAlert("Oops! some thing went wrong",error,"error");
 
-				});
+		});
 
 	 };
 	

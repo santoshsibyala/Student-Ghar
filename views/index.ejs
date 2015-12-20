@@ -28,7 +28,7 @@
 
 </head><!--/head-->
 
-<body id="home" class="homepage" ng-controller='studentGharController as sg' >
+<body id="home" class="homepage" ng-controller='courseController as cc' >
 
 
     <header id="top-header" class="navbar-default navbar-fixed-top myhead" style="background-image: url(/images/slider/bg1.jpg);">
@@ -105,7 +105,7 @@
 
                     <div class="action_btns">
                         <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="login()">Login</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red" ng-click="cc.login()">Login</a></div>
                     </div>
                 </form>
 
@@ -140,7 +140,7 @@
 </div>
 
     <section id="main-slider">
-        <div class="owl-carousel">
+        
             <div class="item" style="background-image: url(/images/slider/bg1.jpg);">
                 <div class="slider-inner">
                     <div class="container">
@@ -150,55 +150,34 @@
                                     <h2>What Course you will take on  <span>Student Ghar?</span></h2>
                                     <h3><span class="h3class">Own your future by learning new skills online</span> </h3>
                                     <div class="input-group">
-                                        <input type="text" class="form-control " placeholder="Find a course virtually anything"  ng-model='search' style="background-color:white"/> 
+                                        <input type="text" id="tags" class="form-control " placeholder="Find a course virtually anything"  ng-model='search' style="background-color:white"/> 
                                         <span class="input-group-addon" ><a href="" ><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
                                     </div>
-                                    
+                                    <br/>
+                                    <font size="3em" >
+                                    <h4><span class="h3class">
+                                    <div class="row ">
+                                        <div class="col-md-3">
+                                            <input type="checkbox">University Courses
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="checkbox">University Projects
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="checkbox">Technical Courses
+                                        </div></span></h4>
+                                    </div>
+                                    </font>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(/images/slider/bg2.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel-content text-center">
 
-                                     <h2>What Course you will take on  <span>Student Ghar?</span></h2>
-                                    <h3><span class="h3class">Own your future by learning new skills online </span></h3>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control " placeholder="Find a course virtually anything" ng-model='search'  style="background-color:white"/> 
-                                        <span class="input-group-addon" ><a href=""><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-            <div class="item" style="background-image: url(/images/slider/bg3.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="carousel-content text-center">
-                                     <h2>What Course you will take on  <span>Student Ghar?</span></h2>
-                                    <h3><span class="h3class">Own your future by learning new skills online</span> </h3>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control " placeholder="Find a course virtually anything" ng-model='search'  style="background-color:white"/> 
-                                        <span class="input-group-addon" ><a href=""><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
             
-        </div><!--/.owl-carousel-->
+            
+       
     </section><!--/#main-slider-->
 
     <section id="about">
@@ -612,6 +591,7 @@ anything.</p>
 
 
     <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/mousescroll.js"></script>
@@ -654,6 +634,37 @@ anything.</p>
         });
 
     })
+</script>
+<script type="text/javascript">
+    $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
 </script>
 </body>
 </html>

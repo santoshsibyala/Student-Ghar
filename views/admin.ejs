@@ -89,25 +89,33 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 height">
-            <a href='' ng-click="cc.myCourses()"<i class="fa fa-server"></i> &nbsp;My Courses</a><br/>
+            <a href='' ng-click="cc.myCourses()"<i class="fa fa-server"></i> &nbsp;All Courses</a><br/>
             <i class="fa fa-desktop"></i>&nbsp;Development<br/>
-            <i class="fa fa-laptop"></i>&nbsp;It Software & Development
+            <i class="fa fa-laptop"></i>&nbsp;It Software & Development<br/><br/>
+            <a class="btn btn-primary" href="" ng-click="cc.addCourse()">Add Course</a>
+
         </div>
         <div class="col-md-9 jumbotron ">
-            <div class="row">
+            <div class="row" ng-show="allcourses">
                     <div class="col-md-2  border1 pad">
                         <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
                         <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
+                     <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
+                    <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
+                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                      <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
                         <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
-                     <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
-                        <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
-                    Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
 
                     </div>
                     <div class="col-md-2 col-md-offset-1 border1 pad">
@@ -115,48 +123,119 @@
                         <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
                         <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                      <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
                         <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                      <img class="img-responsive" src="/images/courses/backbone.jpg" alt="" width="100%">
                         <a href='#' ng-init="y=2" ng-click="particularCourse(y)"><b>Backbone Tutorial: Learn Backbonejs from Scratch</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level<br/><br/>
+                    $19. &nbsp;&nbsp;<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Beginner Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                     </div>
                     <div class="col-md-2 col-md-offset-1 border1 pad">
                     
                         <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                     <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                     <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/>
                     </div>
                     <div class="col-md-2 col-md-offset-1  border1 pad">
                     
                         <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                     <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/><br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/><br/>
                     <img class="img-responsive" src="/images/courses/backbone1.jpg" alt="" width="100%">
                         <a href='#' ng-init="z=3" ng-click="particularCourse(z)"><b>Learn to Program in BackboneJs : Code like a Pro</b></a><br/>
                     Santosh Sibyala, Graduate Student at San Jose State University.<br/>
-                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level<br/>
+                    $29. &nbsp;&nbsp; <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i> &nbsp;&nbsp;7 videos. &nbsp;&nbsp;Expert Level
+                    <br/>
+                     <a class="btn btn-danger dan" href="" ng-click="">Remove Coure</a><br/>
                     </div>
                     
                </div> 
+               <div class="row" ng-show="newcourse">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row whiteContainer">
+                            <div class="col-md-8 col-md-offset-4">
+                                <font size="4em">  <b>Add Course</b></font>
+                            </div>
+                        </div>
+                    <div class="row whiteContainer">
+                        <div class="col-md-10 col-md-offset-2">
+                            Add information about course and instructor.
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-10 ">
+                            <b>Course Details</b>
+                        </div>
+                    </div>
+                        <input type="text" class="form-control" value="" id="" placeholder="Course title" /><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Course tag"/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Price in $"/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Total number of videos"/><br/>
+                        <select class="form-control" placeholder="Type of Course">
+                              <option value="">University Courses</option>
+                              <option value="">University Projects</option>
+                              <option value="">Technical Courses</option>
+                              
+                        </select><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Instructed by "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Introduction video URL "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Total time taken for entire course "/><br/>
+                        <textarea class="form-control" value="" id="" placeholder="Courses Description" ></textarea><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Requirements for the Course "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="What user going to get from course "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Who are the targeted auidence "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Course Image "/><br/>
+                        <textarea class="form-control" value="" id="" placeholder="Course Curriculum" ></textarea><br/>
+                        <div class="row ">
+                            <div class="col-md-10 ">
+                                <b>Instructor details</b>
+                            </div>
+                        </div>
+                        <textarea class="form-control" value="" id="" placeholder="Instructor Biography " ></textarea><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Instructor Linkedln link "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Instructor Facebook link "/><br/>
+                        <input type="text" class="form-control" value="" id=""  placeholder="Instructor Github link "/><br/>
+                        <div class="row ">
+                            <div class="col-md-7 col-md-offset-5">
+                                <a class="btn btn-primary" href="" ng-click="cc.saveNewCourse()">Save</a>
+                            </div>
+                         </div>
+
+                    </div>
+               </div>
         </div>
     </div>
 </div>

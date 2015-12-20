@@ -50,16 +50,18 @@
                     </div>
                     <!-- /logo -->
                 </div>
-
+                <form class="navbar-form navbar-left" role="search">
+          <div class="input-group">
+                <input type="text" id="tags" class="form-control " placeholder="Search for Courses"  ng-model='search' style="background-color:white"/> 
+                <span class="input-group-addon" ><a href="" ><i class="fa fa-search fa-2x" ng-click="serachCourses()"></a></i></span>
+            </div>
+      </form>
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul id="nav" class="nav navbar-nav">
                             <li class="scroll"><a href="#home" data-section="#home">Home</a></li>
-                            <li class="scroll"><a href="#about" data-section="#about">About</a></li>
-                            <li class="scroll"><a href="#services" data-section="#services">Courses</a></li>
                             
-                            <li class="scroll"><a href="#contact-area" data-section="#contact-area">Contact</a></li>
                             <li class=""><a href="#modal" id="modal_trigger" data-section="">Login | Signup</a></li>   
                         </ul>
                     </div>
@@ -382,6 +384,7 @@
     </footer><!--/#footer-->
 
     <script src="/js/jquery.js"></script>
+     <script src="/js/jquery-ui.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/mousescroll.js"></script>
@@ -424,6 +427,38 @@ $("#course").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" })
         });
 
     })
+</script>
+<script type="text/javascript">
+    $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags,
+      autoFocus:true
+    });
+  });
 </script>
 </body>
 </html>
