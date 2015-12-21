@@ -105,7 +105,7 @@ app.controller('courseController',function($scope,$http,$location){
 		//alert("clicked");
 		//alert($scope.search);
 		$http({
-			method:'GET',
+			method:'POST',
 			url:'/login',
 			data: { }
 		}).success(function (data){
